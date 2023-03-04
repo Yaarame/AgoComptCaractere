@@ -1,0 +1,22 @@
+ALGORITHM compt_nb_car
+VAR
+    compt_crt,compt_mt,compt_voy : INTEGER :=0;
+    crt : CHAR
+BEGIN
+    REPEAT
+         read(crt)
+        compt_crt := compt_crt +1;
+        IF (crt == ' ') THEN
+          compt_mt := compt_mt+1;
+        END_IF
+        IF (crt == 'a' || 'A' || 'e'|| 'E'|| 'i'||'I' || 'o'|| 'O' || u ||'U'||'y' ||'Y') THEN
+            compt_mt := compt_mt+1;
+        END_IF
+         
+    UNTIL (crt != '.')
+
+    write(compt_crt)
+    write(compt_mt)
+    write(compt_voy)
+   
+END
